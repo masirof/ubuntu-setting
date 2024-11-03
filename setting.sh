@@ -4,8 +4,6 @@ set -euxo pipefail
 # ctrl と capslock 入れ替え
 gsettings set org.gnome.desktop.input-sources xkb-options "['ctrl:nocaps']"
 
-# 
-
 # apt
 sudo apt update
 
@@ -16,6 +14,9 @@ apt_packages=(
     mozc-utils-gui
 )
 sudo apt install --no-upgrade -y "${apt_packages[@]}"
+
+# デフォルトだとsnapのインストール速度が遅い
+echo "151.101.62.217  fastly.cdn.snapcraft.io" | sudo sh -c 'cat >> /etc/hosts'
 
 # snap
 snap_packages=(
@@ -33,4 +34,4 @@ for package in "${snap_packages[@]}"; do
     fi
 done
 
-ibus restart 
+ibus restart
