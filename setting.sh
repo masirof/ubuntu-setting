@@ -16,7 +16,15 @@ apt_packages=(
 sudo apt install --no-upgrade -y "${apt_packages[@]}"
 
 # デフォルトだとsnapのインストール速度が遅い
-echo "151.101.62.217  fastly.cdn.snapcraft.io" | sudo sh -c 'cat >> /etc/hosts'
+entry="151.101.62.217  fastly.cdn.snapcraft.io"
+
+# すでにエントリが存在するか確認
+if grep -qF "$entry" /etc/hosts; then
+    echo "エントリはすでに存在します: $entry"
+else
+    echo "$entry" | sudo sh -c 'cat >> /etc/hosts'
+    echo "エントリが追加されました。"
+fi
 
 # snap
 snap_packages=(
