@@ -24,6 +24,6 @@ snap_packages=(
 )
 sudo snap install "${snap_packages[@]}"
 
-sudo snap install vscode --classic
+sudo snap install code --classic
 
 ibus restart
