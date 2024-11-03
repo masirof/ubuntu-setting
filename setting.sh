@@ -22,7 +22,7 @@ echo "151.101.62.217  fastly.cdn.snapcraft.io" | sudo sh -c 'cat >> /etc/hosts'
 snap_packages=(
     vivaldi
 )
-sudo install "${snap_packages[@]}"
+sudo snap install "${snap_packages[@]}"
 
 sudo snap install vscode --classic
 
