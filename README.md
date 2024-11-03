@@ -1,5 +1,5 @@
-# ubuntu-setting
+# 'ubuntu-setting
 
 wifiは設定
 
-bash -c "$(curl -fsSL https://raw.githubusercontent.com/kisqragi/dotfiles/master/install.sh)"
+bash -c "$(wget -qO- https://raw.githubusercontent.com/masirof/ubuntu-setting/refs/heads/main/setting.sh)"
