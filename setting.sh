@@ -21,17 +21,9 @@ echo "151.101.62.217  fastly.cdn.snapcraft.io" | sudo sh -c 'cat >> /etc/hosts'
 # snap
 snap_packages=(
     vivaldi
-    vscode
 )
+sudo install "${snap_packages[@]}"
 
-# snap 各パッケージをインストール
-for package in "${snap_packages[@]}"; do
-    if snap list | grep -q "^$package"; then
-        echo "$package は既にインストールされています。"
-    else
-        echo "$package をインストールしています..."
-        sudo snap install "$package"
-    fi
-done
+sudo snap install vscode --classic
 
 ibus restart
