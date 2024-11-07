@@ -12,6 +12,7 @@ sudo apt update
 apt_packages=(
     git
     autokey-gtk
+    autokey-qt
     ibus-mozc
     mozc-utils-gui
 )
