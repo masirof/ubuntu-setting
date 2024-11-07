@@ -27,10 +27,12 @@ echo "deb [arch=amd64 signed-by=/usr/share/keyrings/microsoft-archive-keyring.gp
 
 sudo apt update
 
-sudo apt install vivaldi-stable
-suto apt install code
+sudo apt install --no-upgrade -y vivaldi-stable
+suto apt install --no-upgrade -y code
 
 
+
+# sudo snap remove vivaldi code
 
 # # デフォルトだとsnapのインストール速度が遅い
 # entry="151.101.62.217  fastly.cdn.snapcraft.io"
