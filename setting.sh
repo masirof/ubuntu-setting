@@ -28,7 +28,7 @@ echo "deb [arch=amd64 signed-by=/usr/share/keyrings/microsoft-archive-keyring.gp
 sudo apt update
 
 sudo apt install --no-upgrade -y vivaldi-stable
-suto apt install --no-upgrade -y code
+sudo apt install --no-upgrade -y code
 
 
 
