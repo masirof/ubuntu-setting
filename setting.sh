@@ -31,8 +31,17 @@ sudo apt update
 sudo apt install --no-upgrade -y vivaldi-stable
 sudo apt install --no-upgrade -y code
 
+# キーボードの設定をkeydでしてみる
+# https://harenuma.hatenablog.com/entry/2023/12/14/073830
+# sudo apt install make 
+# sudo apt install -y build-essential
+# git clone https://github.com/rvaiya/keyd ~/Documents/Github/
+# cd ~/Documents/Github/keyd/
+# make && sudo make install
+# sudo systemctl enable keyd && sudo systemctl start keyd
 
 
+# sudo apt remove autokey-qt
 # sudo snap remove vivaldi code
 
 # # デフォルトだとsnapのインストール速度が遅い
