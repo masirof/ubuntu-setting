@@ -13,6 +13,7 @@ apt_packages=(
     git
     ibus-mozc
     mozc-utils-gui
+    gh
 )
 sudo apt install --no-upgrade -y "${apt_packages[@]}"
 
@@ -41,6 +42,12 @@ sudo apt install --no-upgrade -y code
 # cd ~/Documents/Github/keyd/
 # make && sudo make install
 # sudo systemctl enable keyd && sudo systemctl start keyd
+
+# git
+# https://zenn.dev/sassan/articles/a1efb40422f2d7
+# git config --global user.email "you@example.com"
+# git config --global user.name "Your Name"
+# gh auth login
 
 
 # sudo apt remove autokey-qt
